@@ -35,8 +35,7 @@
         e.preventDefault();
 
         var phoneType = $.phonePayment.phoneType($('.phone-number').val());
-        console.log($('.phone-number'));
-        console.log(phoneType);
+
         $('.phone-number').toggleInputError(!$.phonePayment.validatePhoneNumber($('.phone-number').val()));
         $('.pn-brand').text(phoneType);
 
