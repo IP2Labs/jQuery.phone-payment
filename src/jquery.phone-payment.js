@@ -320,6 +320,9 @@ $.phonePayment.validatePhoneNumber = function (num) {
   if (!phone) {
     return false;
   }
+  if ((num.length === 9 && num.charAt(0) !== '7') || (num.length === 10 && num.substr(0, 2) !== '07') || (num.length === 12 && num.substr(0, 4) !== '2567')) {
+    return false;
+  }
   return (ref = num.length, indexOf.call(phone.length, ref) >= 0)
 };
 
